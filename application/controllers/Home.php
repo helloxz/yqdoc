@@ -32,7 +32,7 @@ class Home extends CI_Controller {
 	    //github
 	    $data['github'] = $this->config->item('github');
 	    //qq
-	    $data['qq'] = $this->config->item('qq');
+		$data['qq'] = $this->config->item('qq');
 	    //var_dump($data);
 		//加载视图
 		$this->load->view('default/header',$data);

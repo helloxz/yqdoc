@@ -134,5 +134,7 @@ $autoload['language'] = array();
 */
 $autoload['model'] = array();
 
+//自动加载URL辅助函数
+$autoload['helper'] = array('url');
 //自动加载配置文件
 $autoload['site_config'] = array();

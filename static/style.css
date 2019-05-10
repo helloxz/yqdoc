@@ -1,6 +1,7 @@
 body{
 	background:#fafafa;
 	color:#595959;
+	height:100%
 }
 #header {
     position: relative;
@@ -20,6 +21,7 @@ body{
 .content{
 	margin-top:1.5em;
 }
+
 .home-left , .home-right{
 	background-color: #fff;
 	/*border:1px solid red;*/
@@ -78,11 +80,9 @@ body{
 	padding:0.6em;
 }
 .post-content{
-	border:1px solid #DDDDDD;
-	background-color:#fff;
-	border-top:0;
-	border-bottom:0;
-	
+	background-color: #fff;
+	border-left:1px solid #DDDDDD;
+	border-right:1px solid #DDDDDD;
 }
 .content-html {
 	padding-left:1.4em;
@@ -90,26 +90,39 @@ body{
 	margin-top:2em;
 	margin-bottom:2em;
 }
+
+.name-toc ul li{
+	line-height: 1.6em;
+	
+}
 /*.post-toc{
 	background-color:#fff;
 }*/
+
 .post-toc h3{
 	padding-left:1em;
-	padding-top:1em;
+	padding-top:0.5em;
 }
 .k-catelog-list{
-	padding-left:1.4em;
 	margin-top:0.8em;
+	padding-left:0.6em;
 }
+.k-catelog-list ul{
+	padding-left:1.2em;
+}
+.k-catelog-list ul li{
+	line-height:1.6em;
+}
+
 .name-toc{
-	padding-left:1em;
+	/* padding-left:1em; */
 	padding-top:1em;
 }
 #logo{
 	margin:0;
 	padding:0;
 	float:left;
-	margin-top:0.8em;
+	/* margin-top:0.9em; */
 }
 #logo img{
 	max-width:32px;
@@ -117,4 +130,73 @@ body{
 }
 #logo h1{
 	/*font-size:26px;*/
+	line-height: 2em;
+}
+h1, h2, h3, h4, h5, h6 ,p{
+    color:#393D49;
+}
+h1{
+	font-size:2.2em;
+	/* line-height:2em; */
+}
+h2{
+	font-size:1.8em;
+	/* line-height:2em; */
+}
+h3{
+	font-size:1.6em;
+	/* line-height:2em; */
+}
+h4{
+	font-size:1.4em;
+	/* line-height:2em; */
+}
+code{
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    color: #b94a48;
+    padding: 2px 4px;
+    background: #f3f3f0 none repeat scroll 0 0;
+    margin-left:0.3em;
+    margin-right:0.3em;
+}
+.content-html a{
+	color:#01AAED;
+}
+.md ul{
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+}
+.content-html ul li{
+	list-style-type:square;  
+	line-height:1.6em;
+	margin-left:2em;
+}
+.content-html p{
+	line-height:1.6em;
+}
+.content-html pre{
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+}
+.content-html blockquote{
+	margin-top:1em;
+	font-size:1.2em;
+	background-color: #eeeeee;
+	padding-left:0.6em;
+	padding-right:0.6em;
+	border-left:5px solid #009688;
+}
+.content-html blockquote p{
+	line-height:2em;
+}
+.content-html img{
+	max-width:100%;
+	/* margin-top:1em; */
+	border:1px solid #ECECEC;
+	/* border-radius:6px; */
+}
+.content-html ol li{
+	list-style-type:decimal;
+	margin-left:2.2em;
+	line-height: 1.6em;
 }

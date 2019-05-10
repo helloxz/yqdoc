@@ -18,8 +18,9 @@ class Post extends CI_Controller {
 	public function doc($name,$slug){
 		$data = $this->get_data->doc($name,$slug);
 		$data->toc = $this->get_data->toc($name);
+		//var_dump($data->toc);
 		
-		$this->load->view('default/header');
+		$this->load->view('default/header',$data);
 		$this->load->view('default/post',$data);
 		$this->load->view('default/footer');
 	}

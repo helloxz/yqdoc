@@ -4,7 +4,7 @@
 		<div class="layui-row">
 			<div class="layui-col-lg2">
 				<!--文章左侧-->
-				<div class="post-left">
+				<div class="post-left" id = "post-left">
 					<div class = "name-toc">
 						<ul>
 						<?php foreach( $toc as $value )
@@ -26,7 +26,7 @@
 			</div>
 			<!--文章详细内容END-->
 			<!--文章右侧-->
-			<div class="layui-col-lg2 post-toc">
+			<div class="layui-col-lg2 post-toc" id = "post-toc">
 				<div><h3>目录列表</h3></div>
 				<div class="k-catelog-list" id="catelogList"></div>
 			</div>

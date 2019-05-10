@@ -8,10 +8,11 @@
 	<meta name="author" content="xiaoz" />
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
-	<link rel="stylesheet" href="/static/layui/css/layui.css">
-	<link rel="stylesheet" href="/static/caomei/style.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>static/layui/css/layui.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>static/caomei/style.css">
 	<!--<link rel="stylesheet" href="/static/katelog/style.css">-->
-	<link rel="stylesheet" href="/static/style.css">
+	<link rel='stylesheet' href='https://libs.xiaoz.top/highlight.js/9.12.0/styles/github.min.css'>
+	<link rel="stylesheet" href="<?php echo base_url(); ?>static/style.css">
 </head>
 <body>
 	<!--导航菜单-->
@@ -22,7 +23,7 @@
                     <div class="layui-hide-xs menu">
 	                    <div id="logo">
 		                    <!--<img src="https://gw.alipayobjects.com/zos/rmsportal/XuVpGqBFxXplzvLjJBZB.svg" alt="">-->
-			                <a href="/"><h1 style = "display: inline;">YQdoc</h1></a>
+			                <a href="<?php echo base_url(); ?>"><h1 style = "display: inline;">YQdoc</h1></a>
 	                    </div>
                         <div style = "float:left;">
 	                        <ul class="layui-nav" lay-filter="">

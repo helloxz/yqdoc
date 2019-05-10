@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+//站点域名
+$config['base_url'] = 'http://localhost/yqdoc/';
 //在https://www.yuque.com/settings/account 个人路径进行获取
 $config['login'] = 'helloz';
 //在https://www.yuque.com/settings/tokens 进行申请
