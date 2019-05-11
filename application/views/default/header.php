@@ -24,12 +24,12 @@
         <div class="layui-container">
             <div class="layui-row">
                 <div class="layui-col-lg12">
-                    <div class="layui-hide-xs menu">
+                    <div class="menu">
 	                    <div id="logo">
 		                    <!--<img src="https://gw.alipayobjects.com/zos/rmsportal/XuVpGqBFxXplzvLjJBZB.svg" alt="">-->
 			                <a href="<?php echo base_url(); ?>"><h1 style = "display: inline;" title = "<?php echo $subtitle; ?>"><?php echo $title; ?></h1></a>
 	                    </div>
-                        <div style = "float:left;">
+                        <div style = "float:left;" class = "layui-hide-xs">
 	                        <ul class="layui-nav" lay-filter="">
 	                        <li class="layui-nav-item">
 						    <a href="javascript:;"><i class="layui-icon layui-icon-read"></i> 我的文档</a>

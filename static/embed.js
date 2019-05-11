@@ -33,6 +33,8 @@ $(document).ready(function() {
 	$('#post-left').scrollToFixed();
 	$('#post-toc').scrollToFixed();
 	$("table").addClass("layui-table");
+	//移除图片的style属性
+	$("#kCatelog img").removeAttr("style");
 });
 //返回顶部按钮
 function gotop(){

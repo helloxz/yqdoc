@@ -2,7 +2,7 @@
 <div>
 	<div class="layui-container">
 		<div class="layui-row">
-			<div class="layui-col-lg2">
+			<div class="layui-col-lg2 layui-hide-xs">
 				<!--文章左侧-->
 				<div class="post-left" id = "post-left">
 					<h3><?php echo $name; ?></h3>
@@ -52,7 +52,7 @@
 			</div>
 			<!--文章详细内容END-->
 			<!--文章右侧-->
-			<div class="layui-col-lg2 post-toc" id = "post-toc">
+			<div class="layui-col-lg2 post-toc layui-hide-xs" id = "post-toc">
 				<div><h3>目录列表</h3></div>
 				<div class="k-catelog-list" id="catelogList"></div>
 			</div>
