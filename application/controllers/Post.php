@@ -6,8 +6,10 @@ class Post extends CI_Controller {
 	public $title;
 	public $keywords;
 	public $description;
+	public $template;
 	public function __construct(){
 		parent::__construct();
+		$this->template = $this->config->item('template');
 		$this->token = $this->config->item('token');
 		$this->login = $this->config->item('login');
 		$this->title = $this->config->item('title');
@@ -53,8 +55,8 @@ class Post extends CI_Controller {
 		$data->name = $data->book->name;
 		//var_dump($data->toc);
 		
-		$this->load->view('default/header',$data);
-		$this->load->view('default/post',$data);
-		$this->load->view('default/footer');
+		$this->load->view($this->template.'/header',$data);
+		$this->load->view($this->template.'/post',$data);
+		$this->load->view($this->template.'/footer');
 	}
 }

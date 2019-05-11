@@ -4,10 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Home extends CI_Controller {
 	public $token;
 	public $login;
+	public $template;
 	public function __construct(){
 		parent::__construct();
 		$this->token = $this->config->item('token');
 		$this->login = $this->config->item('login');
+		$this->template = $this->config->item('template');
 	}
 	//默认首页
 	public function index() {
@@ -35,9 +37,9 @@ class Home extends CI_Controller {
 		);
 	    //var_dump($data);
 		//加载视图
-		$this->load->view('default/header',$data);
-		$this->load->view('default/home',$data);
-		$this->load->view('default/footer',$data);
+		$this->load->view($this->template.'/header',$data);
+		$this->load->view($this->template.'/home',$data);
+		$this->load->view($this->template.'/footer',$data);
 	}
 	public function toc($slug){
 		$params = array(
