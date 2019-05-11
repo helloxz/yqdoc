@@ -11,9 +11,9 @@ class Home extends CI_Controller {
 	}
 	//默认首页
 	public function index() {
+		//首页缓存15分钟
+		$this->output->cache(15);
 		$token = $this->config->item('token');
-
-		
 	 	//加载类库
 	 	$params = array(
 	 		'api_token' => $token,
@@ -21,18 +21,18 @@ class Home extends CI_Controller {
 	 	);
 	 	$this->load->library('get_data',$params);
 	 	//调用类方法
-	 	$data['user'] = $this->get_data->user();
-	 	
-	 	$data['repos'] = $this->get_data->repos();
-	 	
-	    //站点信息
-	    $data['site'] = $this->config->item('site');
-	    //微博
-	    $data['weibo'] = $this->config->item('weibo');
-	    //github
-	    $data['github'] = $this->config->item('github');
-	    //qq
-		$data['qq'] = $this->config->item('qq');
+		$data = array(
+			"title"			=>	$this->config->item('title'),
+			"subtitle"		=>	$this->config->item('subtitle'),
+			"keywords"		=>	$this->config->item('keywords'),
+			"description"	=>	$this->config->item('description'),
+			"user"			=>	$data['user'] = $this->get_data->user(),
+			"repos"			=>	$this->get_data->repos(),
+			"site"			=>	$this->config->item('site'),
+			"weibo"			=>	$this->config->item('weibo'),
+			"github"		=>	$this->config->item('github'),
+			"qq"			=>	$this->config->item('qq')
+		);
 	    //var_dump($data);
 		//加载视图
 		$this->load->view('default/header',$data);

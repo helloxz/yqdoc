@@ -87,7 +87,7 @@ body{
 .content-html {
 	padding-left:1.4em;
 	padding-right:1.4em;
-	margin-top:2em;
+	margin-top:1em;
 	margin-bottom:2em;
 }
 
@@ -199,4 +199,23 @@ code{
 	list-style-type:decimal;
 	margin-left:2.2em;
 	line-height: 1.6em;
+}
+/*返回顶部*/
+.top{
+	position:fixed;
+	right:40px;
+	bottom:40px;
+	z-index:99;
+}
+.post-left h3{
+	padding-top:0.5em;
+}
+.donate{
+	margin-top:1em;
+}
+.donate a{
+	color:#FFFFFF;
+}
+code .bash{
+	color:#998;
 }
