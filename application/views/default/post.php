@@ -10,9 +10,10 @@
 						<ul>
 						<?php foreach( $toc as $value )
 						{
-							# code...
+							//一级文档
+							$depth = $value->depth;
 						?>
-							<li><a href="./<?php echo $value->slug; ?>"><?php echo $value->title; ?></a></li>
+							<li><span class = "depth<?php echo $depth; ?>"><a href="<?php echo base_url(); ?><?php echo $this->uri->segment(1); ?>/<?php echo $value->slug; ?>"><?php echo $value->title; ?></a></span></li>
 						<?php } ?>
 						</ul>
 					</div>
@@ -22,6 +23,10 @@
 						<ul>
 							<?php foreach( $repos as $repo )
 							{
+								//不显示隐私文档
+								if($repo->public === 0){
+									continue;
+								}
 								//格式化时间
 								$date = strtotime($repo->updated_at);
 								$date = date('Y-m-d',$date);

@@ -5,16 +5,22 @@ class Home extends CI_Controller {
 	public $token;
 	public $login;
 	public $template;
+	public $cache;
 	public function __construct(){
 		parent::__construct();
+		//获取site_config.php信息
 		$this->token = $this->config->item('token');
 		$this->login = $this->config->item('login');
 		$this->template = $this->config->item('template');
+		$this->cache = $this->config->item('cache');
 	}
 	//默认首页
 	public function index() {
-		//首页缓存15分钟
-		$this->output->cache(15);
+		//判断是否开启缓存
+		if($this->cache == TRUE){
+			//首页缓存15分钟
+			$this->output->cache(15);
+		}
 		$token = $this->config->item('token');
 	 	//加载类库
 	 	$params = array(
@@ -35,6 +41,7 @@ class Home extends CI_Controller {
 			"github"		=>	$this->config->item('github'),
 			"qq"			=>	$this->config->item('qq')
 		);
+		//var_dump($data['repos']);
 	    //var_dump($data);
 		//加载视图
 		$this->load->view($this->template.'/header',$data);

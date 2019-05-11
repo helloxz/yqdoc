@@ -25,6 +25,10 @@
 					<div class="home-right">
 						<?php foreach( $repos as $repo )
 						{
+							//不显示隐私文档
+							if($repo->public === 0){
+								continue;
+							}
 							//格式化时间
 							$date = strtotime($repo->updated_at);
 							$date = date('Y-m-d',$date);

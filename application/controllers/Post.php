@@ -7,6 +7,7 @@ class Post extends CI_Controller {
 	public $keywords;
 	public $description;
 	public $template;
+	public $cache;
 	public function __construct(){
 		parent::__construct();
 		$this->template = $this->config->item('template');
@@ -16,6 +17,7 @@ class Post extends CI_Controller {
 		$this->subtitle = $this->config->item('subtitle');
 		$this->keywords = $this->config->item('keywords');
 		$this->description = $this->config->item('description');
+		$this->cache = $this->config->item('cache');
 		//加载类库
 	 	$params = array(
 	 		'api_token' => $this->token,
@@ -28,12 +30,16 @@ class Post extends CI_Controller {
  //       $this->doc($name,$slug);
  //   }
 	public function doc($name,$slug = ''){
-		//文章页面缓存12小时
-		$this->output->cache(12 * 60);
+		//判断是否开启缓存
+		if($this->cache === TRUE){
+			//文章页面缓存12小时
+			$this->output->cache(12 * 60);
+		}
+		
 		//XSS过滤
 		$name = $this->security->xss_clean($name);
 		$slug = $this->security->xss_clean($slug);
-		if( ($slug == '') OR (!isset($slug)) ) {
+		if( ($slug == '') OR ( ! isset($slug)) ) {
 			$toc_tmp = $this->get_data->toc($name);
 			$slug = $toc_tmp[0]->slug;
 			$url = current_url();
@@ -47,6 +53,7 @@ class Post extends CI_Controller {
 		$subtitle = $data->title;
 		//获取当前文档列表
 		$data->toc = $this->get_data->toc($name);
+		
 		$data->title = $this->title;
 		$data->subtitle = $data->book->name."【{$subtitle}】";
 		$data->keywords = $this->keywords.','.$data->book->name;

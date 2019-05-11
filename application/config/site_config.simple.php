@@ -26,6 +26,9 @@ $config['template'] = 'default';
 /*
 以下为选填
 */
+
+//是否开启缓存，默认关闭，正式环境建议开启。FALSE:关闭 ， TRUE: 开启
+$config['cache'] = FALSE;
 //网站标题
 $config['title'] = 'Zdoc';
 //副标题

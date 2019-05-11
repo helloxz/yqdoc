@@ -81,8 +81,10 @@ body{
 }
 .post-content{
 	background-color: #fff;
-	border-left:1px solid #DDDDDD;
+	/* border-left:1px solid #DDDDDD;
 	border-right:1px solid #DDDDDD;
+	border-bottom:1px solid #DDDDDD; */
+	box-shadow:1px 1px 4px #998;
 }
 .content-html {
 	padding-left:1.4em;
@@ -218,4 +220,11 @@ code{
 }
 code .bash{
 	color:#998;
+}
+/* TOC深度 */
+.depth2{
+	padding-left:1.5em;
+}
+.depth3{
+	padding-left:3em;
 }
