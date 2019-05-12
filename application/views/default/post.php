@@ -78,7 +78,7 @@
 					<h1><?php echo $subtitle; ?></h1>
 						<p id = "post-info">
 							<span>最后更新:<?php echo $content_updated_at; ?></span>
-							<span><a href="<?php echo base_url(); ?>del/?uri=<?php echo $this->uri->segment(1) ?>/<?php echo $this->uri->segment(2); ?>" rel = "nofollow" target = "_blank">清除缓存</a></span>
+							<span><a href="<?php echo base_url(); ?>del/?uri=<?php echo $this->uri->segment(1) ?>/<?php echo $this->uri->segment(2); ?>" rel = "nofollow" target = "_blank">清除缓存</a>（若页面显示异常，请点此清除缓存）</span>
 						</p>
 					<hr>
 					<?php echo $body_html; ?>

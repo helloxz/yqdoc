@@ -37,7 +37,7 @@
 							$date = date('Y-m-d',$date);
 						?>
 						<!--这里写HTML-->
-							<div class="doc" data-no-instant>
+							<div class="doc">
 								<p><a href="<?php echo base_url(); ?>doc-<?php echo $repo->slug; ?>"><h2><span class = "czs-doc-file-l"> </span><?php echo $repo->name; ?></h2></a></p>
 								<p><?php echo $repo->description; ?></p>
 								<p><span class = "czs-time-l"> </span><?php echo $date; ?></p>
