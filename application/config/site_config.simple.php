@@ -36,9 +36,11 @@ $config['subtitle'] = '基于语雀API开发的文档系统';
 //首页关键词
 $config['keywords'] = 'yqdoc,zdoc,小z博客,文档系统,markdown';
 //首页描述
-$config['description'] = '测试描述';
+$config['description'] = '站点描述';
 //个人社交信息
 $config['site'] = 'https://www.xiaoz.me/';
 $config['weibo'] = 'http://weibo.com/337003006';
 $config['github'] = 'https://github.com/helloxz';
 $config['qq'] = 'http://wpa.qq.com/msgrd?v=3&amp;uin=337003006&amp;site=qq&amp;menu=yes';
+//捐赠地址
+$config['donation'] = 'https://www.xiaoz.me/api/pay/';

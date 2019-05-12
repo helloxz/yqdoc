@@ -20,6 +20,9 @@
 						</div>
 						<!--社交信息END-->
 					</div>
+					<div class="gg-home">
+						<p><a href="https://e.aiguobit.com/?from=xiaoz" target="_blank" rel="nofollow noopener"><img class="alignnone size-full wp-image-6279" src="https://www.xiaoz.me/wp-content/uploads/2019/04/wljs.jpg"></a></p>
+					</div>
 				</div>
 				<div class="layui-col-lg8">
 					<div class="home-right">

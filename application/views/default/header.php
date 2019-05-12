@@ -12,7 +12,10 @@
 	<link rel="stylesheet" href="<?php echo base_url(); ?>static/caomei/style.css">
 	<!--<link rel="stylesheet" href="/static/katelog/style.css">-->
 	<link rel='stylesheet' href='https://libs.xiaoz.top/highlight.js/9.12.0/styles/github.min.css'>
-	<link rel="stylesheet" href="<?php echo base_url(); ?>static/style.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>static/style.css?v=0.9">
+	<!-- 统计代码 -->
+	<script src="<?php echo base_url(); ?>static/tj.js"></script>
+	<!-- 统计代码END -->
 </head>
 <body>
 	<!--返回顶部按钮-->
@@ -36,6 +39,10 @@
 						    <dl class="layui-nav-child"> <!-- 二级菜单 -->
 						    <?php foreach( $repos as $repo )
 							{
+								//不显示隐私文档
+								if($repo->public === 0){
+									continue;
+								}
 								//格式化时间
 								$date = strtotime($repo->updated_at);
 								$date = date('Y-m-d',$date);

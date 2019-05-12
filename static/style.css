@@ -81,10 +81,10 @@ body{
 }
 .post-content{
 	background-color: #fff;
-	/* border-left:1px solid #DDDDDD;
+	border-left:1px solid #DDDDDD;
 	border-right:1px solid #DDDDDD;
-	border-bottom:1px solid #DDDDDD; */
-	box-shadow:1px 1px 4px #998;
+	border-bottom:1px solid #DDDDDD;
+	/* box-shadow:1px 1px 4px #998; */
 }
 .content-html {
 	padding-left:1.4em;
@@ -174,11 +174,11 @@ code{
 	margin-left:2em;
 }
 .content-html p{
-	line-height:1.6em;
+	line-height:1.4em;
 }
 .content-html pre{
-	margin-top:0.5em;
-	margin-bottom:0.5em;
+	/* margin-top:0.5em;
+	margin-bottom:0.5em; */
 }
 .content-html blockquote{
 	margin-top:1em;
@@ -214,6 +214,7 @@ code{
 }
 .donate{
 	margin-top:1em;
+	margin-bottom:1em;
 }
 .donate a{
 	color:#FFFFFF;
@@ -227,4 +228,27 @@ code .bash{
 }
 .depth3{
 	padding-left:3em;
+}
+.gg-home img{
+	max-width: 100%;
+	margin-top:1em;
+}
+.gg-post-left img{
+	max-width: 95%;
+	margin-top:1em;
+}
+.gg-post-right img{
+	max-width: 100%;
+	margin-top:1em;
+	margin-left:1em;
+}
+#post-info{
+	margin-top:1em;
+	color:#a5a5a5;
+}
+#post-info span{
+	margin-right:1em;
+}
+#post-info a{
+	color:#a5a5a5;
 }

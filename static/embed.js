@@ -42,13 +42,13 @@ function gotop(){
 }
 
 //捐赠按钮
-function donate(){
+function donate(url){
 	var title = $("title").text();
 	title = title.replace(' - 小z博客','');
 	layer.open({
 	  	type: 2, 
 	  	title:'创作不易，用心坚持，请xiaoz喝一怀咖啡吧！',
 	  	area: ['680px', '68%'],
-	  	content: 'https://www.xiaoz.me/api/pay/'
+	  	content: url
 	}); 
 }

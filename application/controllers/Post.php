@@ -8,6 +8,7 @@ class Post extends CI_Controller {
 	public $description;
 	public $template;
 	public $cache;
+	public $donation;
 	public function __construct(){
 		parent::__construct();
 		$this->template = $this->config->item('template');
@@ -18,6 +19,7 @@ class Post extends CI_Controller {
 		$this->keywords = $this->config->item('keywords');
 		$this->description = $this->config->item('description');
 		$this->cache = $this->config->item('cache');
+		$this->donation = $this->config->item('donation');
 		//加载类库
 	 	$params = array(
 	 		'api_token' => $this->token,
@@ -60,6 +62,10 @@ class Post extends CI_Controller {
 		//$data->description = $data->subtitle."。".$data->book->description;
 		$data->repos = $this->get_data->repos();
 		$data->name = $data->book->name;
+		//捐赠地址
+		$data->donation = $this->donation;
+		//文档最后更新时间
+		$data->content_updated_at = date('Y-m-d H:i',strtotime($data->book->content_updated_at));
 		//var_dump($data->toc);
 		
 		$this->load->view($this->template.'/header',$data);

@@ -53,6 +53,6 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 //重写路由
-#$route['del/(:any)/(:any)'] = 'dcache/index/$1/$2';
+$route['del'] = 'dcache/index';
 $route['doc-(:any)'] = 'post/doc/$1';
 $route['doc-(:any)/(:any)'] = 'post/doc/$1/$2';
