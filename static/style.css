@@ -96,8 +96,7 @@ body{
 	white-space: pre;
 }
 .name-toc ul li{
-	line-height: 1.6em;
-	
+	line-height: 1.7em;
 }
 /*.post-toc{
 	background-color:#fff;
@@ -106,6 +105,8 @@ body{
 .post-toc h3{
 	padding-left:1em;
 	padding-top:0.5em;
+	font-size:1.3em;
+	font-weight:bold;
 }
 .k-catelog-list{
 	margin-top:0.8em;
@@ -115,7 +116,7 @@ body{
 	padding-left:1.2em;
 }
 .k-catelog-list ul li{
-	line-height:1.6em;
+	line-height:1.7em;
 }
 
 .name-toc{
@@ -140,15 +141,17 @@ h1, h2, h3, h4, h5, h6 ,p{
     color:#393D49;
 }
 h1{
-	font-size:2.2em;
+	font-size:2em;
 	/* line-height:2em; */
 }
 h2{
-	font-size:1.8em;
+	font-size:1.7em;
+	font-weight:bold;
 	/* line-height:2em; */
 }
 h3{
-	font-size:1.6em;
+	font-size:1.5em;
+	font-weight:bold;
 	/* line-height:2em; */
 }
 h4{
@@ -176,7 +179,7 @@ code{
 	margin-left:2em;
 }
 .content-html p{
-	line-height:1.4em;
+	line-height:1.5em;
 }
 .content-html pre{
 	/* margin-top:0.5em;
@@ -311,3 +314,8 @@ border-left:2px solid #5FB878;
 /*.name-toc li a{
 	padding-bottom:3px;
 }*/
+.post-left h3{
+	/*border-left: 5px solid #009E94;*/
+	font-size:1.3em;
+	font-weight:bold;
+}

@@ -40,6 +40,7 @@
 						    </dl>
 						</ul>
 					</div>
+					<hr>
 					<!-- gg -->
 					<div class="gg-post-left">
 						<p><a title="CloudCone最新促销，低至$12.95/年" href="https://www.xiaoz.me/archives/11183" target="_blank" rel="nofollow noopener"><img src="https://i.bmp.ovh/imgs/2019/05/57e4a6f0d1c46779.jpg"></a></p>
@@ -95,6 +96,7 @@
 			<div class="layui-col-lg2 post-toc layui-hide-xs" id = "post-toc">
 				<div><h3>目录列表</h3></div>
 				<div class="k-catelog-list" id="catelogList"></div>
+				<hr>
 				<div class="gg-post-right">
 					<p>
 						<a href="https://dwz.ovh/vultr" target="_blank" rel="nofollow noopener"><img src="https://i.bmp.ovh/imgs/2019/05/018fcf556e29b639.png"></a>

@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="<?php echo base_url(); ?>static/caomei/style.css">
 	<!--<link rel="stylesheet" href="/static/katelog/style.css">-->
 	<link rel='stylesheet' href='https://libs.xiaoz.top/highlight.js/9.12.0/styles/github.min.css'>
-	<link rel="stylesheet" href="<?php echo base_url(); ?>static/style.css?v=0.91">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>static/style.css?v=0.92">
 	<!-- 统计代码 -->
 	<script src="<?php echo base_url(); ?>static/tj.js"></script>
 	<!-- 统计代码END -->
