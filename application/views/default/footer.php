@@ -18,7 +18,7 @@
 	<script src = 'https://libs.xiaoz.top/highlight.js/9.12.0/highlight.min.js'></script>
 	<script src="<?php echo base_url(); ?>/static/katelog/katelog.min.js"></script>
 	<script src = 'https://libs.xiaoz.top/instantclick/instantclick.min.js' data-no-instant></script>
-	<script src="<?php echo base_url(); ?>/static/embed.js?v=0.9"></script>
+	<script src="<?php echo base_url(); ?>/static/embed.js?v=0.91"></script>
 	<script data-no-instant>InstantClick.init();</script>
 </body>
 </html>
