@@ -34,8 +34,8 @@ class Post extends CI_Controller {
 	public function doc($name,$slug = ''){
 		//判断是否开启缓存
 		if($this->cache === TRUE){
-			//文章页面缓存12小时
-			$this->output->cache(12 * 60);
+			//文章页面缓存6小时
+			$this->output->cache(6 * 60);
 		}
 		
 		//XSS过滤
