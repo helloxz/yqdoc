@@ -27,27 +27,8 @@ class Get_data {
 	public function user(){
 		$token = $this->api_token;
 		$url = $this->api_url."/user";
-		$headers = array();
-		$headers[] = 'X-Auth-Token: '.$token;
-		$curl = curl_init($url);
-
-	    curl_setopt($curl, CURLOPT_USERAGENT, "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)");
-	    curl_setopt($curl, CURLOPT_FAILONERROR, true);
-	    curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
-	    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-	    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-	    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-	    curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-	    #设置超时时间，最小为1s（可选）
-	    curl_setopt($curl , CURLOPT_TIMEOUT, 1);
-
-	    $html = curl_exec($curl);
-	    curl_close($curl);
-	    //var_dump($url);
-	    //exit;
-	    $data = json_decode($html)->data;
-		
-	    return $data;
+		$data = $this->curl($token,$url);
+		return $data;
 	}
 	//获取文档列表
 	public function repos(){
@@ -91,7 +72,7 @@ class Get_data {
 		$headers[] = 'X-Auth-Token: '.$token;
 		$curl = curl_init($url);
 
-	    curl_setopt($curl, CURLOPT_USERAGENT, "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)");
+	    curl_setopt($curl, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36");
 	    curl_setopt($curl, CURLOPT_FAILONERROR, true);
 	    curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
 	    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);

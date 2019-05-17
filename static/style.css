@@ -201,6 +201,9 @@ code{
 	/* margin-top:1em; */
 	border:1px solid #ECECEC;
 	/* border-radius:6px; */
+	/*cursor:url('et-amplification.png'),auto;*/
+	/*cursor:url('et-amplification.svg');*/
+	cursor: pointer;
 }
 .content-html ol li{
 	list-style-type:decimal;
