@@ -96,8 +96,7 @@ body{
 	white-space: pre;
 }
 .name-toc ul li{
-	line-height: 1.6em;
-	
+	line-height: 1.7em;
 }
 /*.post-toc{
 	background-color:#fff;
@@ -106,16 +105,18 @@ body{
 .post-toc h3{
 	padding-left:1em;
 	padding-top:0.5em;
+	font-size:1.3em;
+	font-weight:bold;
 }
 .k-catelog-list{
 	margin-top:0.8em;
-	padding-left:0.6em;
+	/*padding-left:0.6em;*/
 }
 .k-catelog-list ul{
 	padding-left:1.2em;
 }
 .k-catelog-list ul li{
-	line-height:1.6em;
+	line-height:1.7em;
 }
 
 .name-toc{
@@ -140,15 +141,17 @@ h1, h2, h3, h4, h5, h6 ,p{
     color:#393D49;
 }
 h1{
-	font-size:2.2em;
+	font-size:2em;
 	/* line-height:2em; */
 }
 h2{
-	font-size:1.8em;
+	font-size:1.7em;
+	font-weight:bold;
 	/* line-height:2em; */
 }
 h3{
-	font-size:1.6em;
+	font-size:1.5em;
+	font-weight:bold;
 	/* line-height:2em; */
 }
 h4{
@@ -176,7 +179,7 @@ code{
 	margin-left:2em;
 }
 .content-html p{
-	line-height:1.4em;
+	line-height:1.5em;
 }
 .content-html pre{
 	/* margin-top:0.5em;
@@ -198,6 +201,9 @@ code{
 	/* margin-top:1em; */
 	border:1px solid #ECECEC;
 	/* border-radius:6px; */
+	/*cursor:url('et-amplification.png'),auto;*/
+	/*cursor:url('et-amplification.svg');*/
+	cursor: pointer;
 }
 .content-html ol li{
 	list-style-type:decimal;
@@ -261,4 +267,58 @@ code .bash{
 }
 .k-catelog-level-3 ul{
 	list-style-type:disc;
+}
+/*.k-catelog-list {
+    width: 300px;
+    height: 500px;
+    position: fixed;
+    left: 20px;
+    top: 100px;
+    overflow-y: auto;
+    font-size: 14px;
+    border: 1px solid #e0e0e0;
+  }*/
+
+.k-catelog-list>ul {
+padding: 0;
+}
+
+/*.k-catelog-list li {
+list-style: none;
+}*/
+
+.k-catelog-link {
+cursor: pointer;
+display: block;
+/*padding: 8px 12px;*/
+text-decoration: none;
+transition: background 0.5s;
+-moz-transition: background 0.5s;
+/* Firefox 4 */
+-webkit-transition: background 0.5s;
+/* Safari and Chrome */
+-o-transition: background 0.5s;
+/* Opera */
+padding-left:1.8em;
+}
+
+.k-catelog-link-active {
+/*background: #333;*/
+color:#5FB878;
+border-left:2px solid #5FB878;
+}
+.selected{
+	font-weight:bold;
+	border-bottom:1px solid #5FB878;
+}
+.selected a{
+	color:#5FB878;
+}
+/*.name-toc li a{
+	padding-bottom:3px;
+}*/
+.post-left h3{
+	/*border-left: 5px solid #009E94;*/
+	font-size:1.3em;
+	font-weight:bold;
 }

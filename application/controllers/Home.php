@@ -1,4 +1,13 @@
 <?php
+/**
+ * yqdoc首页
+ *
+ * @package Package Name
+ * @subpackage Subpackage
+ * @category Category
+ * @author xiaoz
+ * @link https://www.xiaoz.me/
+ */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
@@ -28,14 +37,26 @@ class Home extends CI_Controller {
 	 		'login' => $this->config->item('login')
 	 	);
 	 	$this->load->library('get_data',$params);
+	 	//获取用户信息
+	 	$user = $this->get_data->user();
+	 	//如果执行不成功，再次执行
+	 	if( ! $user) {
+		 	$user = $this->get_data->user();
+	 	}
+	 	//获取repos仓库列表
+	 	$repos = $this->get_data->repos();
+	 	//如果执行不成功，再次执行
+	 	if( ! $repos) {
+		 	$repos = $this->get_data->repos();
+	 	}
 	 	//调用类方法
 		$data = array(
 			"title"			=>	$this->config->item('title'),
 			"subtitle"		=>	$this->config->item('subtitle'),
 			"keywords"		=>	$this->config->item('keywords'),
 			"description"	=>	$this->config->item('description'),
-			"user"			=>	$data['user'] = $this->get_data->user(),
-			"repos"			=>	$this->get_data->repos(),
+			"user"			=>	$user,
+			"repos"			=>	$repos,
 			"site"			=>	$this->config->item('site'),
 			"weibo"			=>	$this->config->item('weibo'),
 			"github"		=>	$this->config->item('github'),
@@ -47,14 +68,5 @@ class Home extends CI_Controller {
 		$this->load->view($this->template.'/header',$data);
 		$this->load->view($this->template.'/home',$data);
 		$this->load->view($this->template.'/footer',$data);
-	}
-	public function toc($slug){
-		$params = array(
-	 		'api_token' => $this->token,
-	 		'login' => $this->config->item('login')
-	 	);
-		$this->load->library('get_data',$params);
-		$data = $this->get_data->toc($slug);
-		var_dump($data);
 	}
 }

@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="<?php echo base_url(); ?>static/caomei/style.css">
 	<!--<link rel="stylesheet" href="/static/katelog/style.css">-->
 	<link rel='stylesheet' href='https://libs.xiaoz.top/highlight.js/9.12.0/styles/github.min.css'>
-	<link rel="stylesheet" href="<?php echo base_url(); ?>static/style.css?v=0.9">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>static/style.css?v=0.92">
 	<!-- 统计代码 -->
 	<script src="<?php echo base_url(); ?>static/tj.js"></script>
 	<!-- 统计代码END -->
@@ -55,7 +55,7 @@
 							?>
 						    </dl>
 						  </li>
-                            <li class="layui-nav-item"><a href="https://www.xiaoz.me/"><i class="layui-icon layui-icon-website"></i> Blog</a></li>
+                            <li class="layui-nav-item"><a href="https://www.xiaoz.me/" target = "_blank"><i class="layui-icon layui-icon-website"></i> Blog</a></li>
                             <li class="layui-nav-item"><a href="https://imgurl.org/" rel = "nofollow" target = "_blank" title = "免费图片外链工具"><i class="layui-icon layui-icon-picture-fine"></i> 免费图床</a></li>
                             <li class="layui-nav-item"><a href="https://github.com/helloxz/yqdoc" rel = "nofollow" target = "_blank" title = "下载YQdoc源码"><i class="layui-icon layui-icon-fonts-code"></i> 源码下载</a></li>
                         	</ul>

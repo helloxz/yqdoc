@@ -52,3 +52,10 @@ function donate(url){
 	  	content: url
 	}); 
 }
+//对当前页面高亮
+$(".name-toc li a").each(function(){
+    $this = $(this);
+   if($this[0].href==String(window.location)){
+       $this.parent().addClass("selected");
+   }    
+});
