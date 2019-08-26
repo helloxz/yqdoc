@@ -5,7 +5,10 @@
 				<div class="layui-col-lg4 ">
 					<div class="home-left">
 						<!--头像-->
-						<div class="avatar_url"><img src="<?php echo $user->avatar_url; ?>" alt=""></div>
+						<div class="avatar_url"><img src="<?php
+							$user->avatar_url = str_replace('https://cdn.nlark.com',$pic_doamin,$user->avatar_url);
+							echo $user->avatar_url; 
+						?>" alt=""></div>
 						<!--名字-->
 						<div class="name"><?php echo $user->name; ?></div>
 						<!--个人描述-->

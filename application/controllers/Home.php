@@ -25,6 +25,9 @@ class Home extends CI_Controller {
 	}
 	//默认首页
 	public function index() {
+		//获取图片域名
+		$this->load->helper('url');
+		$pic_domain = site_url('').'post/img?path=';
 		//判断是否开启缓存
 		if($this->cache == TRUE){
 			//首页缓存15分钟
@@ -60,7 +63,8 @@ class Home extends CI_Controller {
 			"site"			=>	$this->config->item('site'),
 			"weibo"			=>	$this->config->item('weibo'),
 			"github"		=>	$this->config->item('github'),
-			"qq"			=>	$this->config->item('qq')
+			"qq"			=>	$this->config->item('qq'),
+			'pic_doamin'	=>	$pic_domain
 		);
 		//var_dump($data['repos']);
 	    //var_dump($data);
